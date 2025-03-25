@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <title>WildLife</title>
+    <style>
+        #contact-form {
+            display: none;
+        }
+        body {
+            padding-top: 10px;
+        }
+        .card-img-top {
+            height: 200px;
+            object-fit: cover;
+        }
+        .navbar-custom {
+            background-color: #f8f9fa;
+            border: 2px solid #ddd;
+            padding: 10px;
+            border-radius: 10px;
+        }
+        .nav-link {
+            font-size: 20px;
+            font-weight: bold;
+            cursor: pointer;
+            color: black;
+        }
+        .nav-link.active {
+            color: blue !important;
+        }
+        .card-body {
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+        }
+        .card-text {
+            flex-grow: 1;
+        }
+        .btn {
+            align-self: flex-start;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light border rounded px-4">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <header class="d-flex justify-content-between align-items-center py-4">
+            <div class="d-flex align-items-center flex-row-reverse">
+                <h1 class="mb-0 ml-3">WildLife</h1>
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" width="30" height="30">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M12 12.75c1.148 0 2.278.08 3.383.237 1.037.146 1.866.966 1.866 2.013 0 3.728-2.35 6.75-5.25 6.75S6.75 18.728 6.75 15c0-1.046.83-1.867 1.866-2.013A24.204 24.204 0 0 1 12 12.75Zm0 0c2.883 0 5.647.508 8.207 1.44a23.91 23.91 0 0 1-1.152 6.06M12 12.75c-2.883 0-5.647.508-8.208 1.44.125 2.104.52 4.136 1.153 6.06M12 12.75a2.25 2.25 0 0 0 2.248-2.354M12 12.75a2.25 2.25 0 0 1-2.248-2.354M12 8.25c.995 0 1.971-.08 2.922-.236.403-.066.74-.358.795-.762a3.778 3.778 0 0 0-.399-2.25M12 8.25c-.995 0-1.97-.08-2.922-.236-.402-.066-.74-.358-.795-.762a3.734 3.734 0 0 1 .4-2.253M12 8.25a2.25 2.25 0 0 0-2.248 2.146M12 8.25a2.25 2.25 0 0 1 2.248 2.146M8.683 5a6.032 6.032 0 0 1-1.155-1.002c.07-.63.27-1.222.574-1.747m.581 2.749A3.75 3.75 0 0 1 15.318 5m0 0c.427-.283.815-.62 1.155-.999a4.471 4.471 0 0 0-.575-1.752M4.921 6a24.048 24.048 0 0 0-.392 3.314c1.668.546 3.416.914 5.223 1.082M19.08 6c.205 1.08.337 2.187.392 3.314a23.882 23.882 0 0 1-5.223 1.082" />
+                </svg>
+        </header>        
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item"><a class="nav-link" href="#" onclick="showHome()">Home</a></li>
+                <li class="nav-item"><a class="nav-link" href="#">About</a></li>
+                <li class="nav-item"><a class="nav-link" href="#" onclick="showContact()">Contact Me</a></li>
+            </ul>
+        </div>
+    </nav> 
+
+    <div class="container mt-5" id="main-content">
+        <div class="row">
+            <!-- Card 1 -->
+            <div class="col-md-3">
+                <div class="card h-100">
+                    <img src="cat.jpeg" class="card-img-top" alt="Cat">
+                    <div class="card-body">
+                        <h5 class="card-title">Mengapa Kucing Suka Menggosokkan Badannya ke Manusia?</h5>
+                        <p class="card-text">Aura Zahra R | Posted on 15 March 2025</p>
+                        <p class="card-text">Ternyata ini bukan sekadar tanda sayang! Ada alasan ilmiah di balik kebiasaan unik kucing ini.</p>
+                        <a href="#" class="btn btn-primary">Read More</a>
+                    </div>
+                </div>
+            </div>
+           <!-- Card 2 -->
+           <div class="col-md-3">
+                <div class="card h-100">
+                    <img src="dog.jpeg" class="card-img-top" alt="Dog">
+                    <div class="card-body">
+                       <h5 class="card-title">5 Fakta Unik Tentang Anjing yang Jarang Diketahui</h5>
+                       <p class="card-text">Aura Zahra R | Posted on 15 March 2025</p>
+                       <p class="card-text">Dari indra penciuman super tajam hingga kemampuan membaca emosi manusia, anjing memang hewan luar biasa!</p>
+                       <a href="#" class="btn btn-primary">Read More</a>
+                    </div>
+                </div>
+            </div>
+           <!-- Card 3 -->
+           <div class="col-md-3">
+                <div class="card h-100">
+                    <img src="shark.jpg" class="card-img-top" alt="shark">
+                    <div class="card-body">
+                      <h5 class="card-title">Hewan dengan Umur Terpanjang di Dunia</h5>
+                      <p class="card-text">Aura Zahra R | Posted on 15 March 2025</p>
+                      <p class="card-text">Tahukah kamu? Ada hewan yang bisa hidup hingga ratusan tahun, bahkan lebih lama dari manusia!</p>
+                      <a href="#" class="btn btn-primary">Read More</a>
+                    </div>
+                </div>
+            </div>
+            <!-- Card 4 -->
+            <div class="col-md-3">
+                <div class="card h-100">
+                    <img src="ant.jpg" class="card-img-top" alt="Ant">
+                    <div class="card-body">
+                      <h5 class="card-title">Bagaimana Cara Semut Berkomunikasi?</h5>
+                      <p class="card-text">Aura Zahra R | Posted on 15 March 2025</p>
+                      <p class="card-text">Semut ternyata memiliki sistem komunikasi canggih menggunakan feromon. Simak cara mereka bekerja sama!</p>
+                      <a href="#" class="btn btn-primary">Read More</a>
+                    </div>
+                </div>
+           </div>
+        </div> <br>
+        <div class="row">
+            <!-- Card 5 -->
+            <div class="col-md-3">
+                <div class="card h-100">
+                    <img src="bird.jpg" class="card-img-top" alt="Bird">
+                    <div class="card-body">
+                      <h5 class="card-title"> Burung yang Bisa Menirukan Suara Manusia</h5>
+                      <p class="card-text">Aura Zahra R | Posted on 15 March 2025</p>
+                      <p class="card-text">Bukan hanya beo, ada beberapa spesies burung lain yang bisa menirukan suara manusia dengan sangat jelas!</p>
+                      <a href="#" class="btn btn-primary">Read More</a>
+                    </div>
+                </div>
+            </div>
+           <!-- Card 6 -->
+           <div class="col-md-3">
+                <div class="card h-100">
+                    <img src="platipus.jpg" class="card-img-top" alt="Platipus">
+                    <div class="card-body">
+                      <h5 class="card-title">Mamalia yang Bisa Bertelur: Fakta Unik Platipus</h5>
+                      <p class="card-text">Aura Zahra R | Posted on 15 March 2025</p>
+                      <p class="card-text">Platipus adalah mamalia unik yang bertelur! Temukan fakta menarik tentang hewan langka ini.</p>
+                      <a href="#" class="btn btn-primary">Read More</a>
+                    </div>
+                </div>
+            </div>
+           <!-- Card 7 -->
+            <div class="col-md-3">
+                <div class="card h-100">
+                    <img src="snake.webp" class="card-img-top" alt="Snake">
+                    <div class="card-body">
+                      <h5 class="card-title">Bagaimana Ular Bisa Menelan Mangsa yang Lebih Besar dari Kepalanya?</h5>
+                      <p class="card-text">Aura Zahra R | Posted on 15 March 2025</p>
+                      <p class="card-text">Ular memiliki rahang fleksibel yang memungkinkannya menelan mangsa dengan ukuran besar.</p>
+                      <a href="#" class="btn btn-primary">Read More</a>
+                    </div>
+                </div>
+            </div>
+            <!-- Card 8 -->
+            <div class="col-md-3">
+                <div class="card h-100">
+                    <img src="dolphin.jpeg" class="card-img-top" alt="Dolphin">
+                    <div class="card-body">
+                      <h5 class="card-title">Fakta Menarik Tentang Lumba-lumba, Hewan Laut yang Cerdas</h5>
+                      <p class="card-text">Aura Zahra R | Posted on 15 March 2025</p>
+                      <p class="card-text">Lumba-lumba dikenal sebagai salah satu hewan laut paling cerdas. Mereka bahkan bisa mengenali diri sendiri di cermin!</p>
+                      <a href="#" class="btn btn-primary">Read More</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+ 
+    <div class="container mt-5" id="contact-form">
+        <h2 class="text-center text-primary">Contact Me</h2>
+        <p class="text-center">If you need help, please contact us via the form below</p>
+        
+        <form>
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" class="form-control" id="email" placeholder="Enter email" required>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <div class="form-group">
+                        <label for="firstName">First Name</label>
+                        <input type="text" class="form-control" id="firstName" placeholder="Enter Name" required>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="form-group">
+                        <label for="lastName">Last Name</label>
+                        <input type="text" class="form-control" id="lastName" placeholder="Enter Name" required>
+                    </div>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="message">Message</label>
+                <textarea class="form-control" id="message" rows="4" required></textarea>
+            </div>
+            <div class="form-check">
+                <input type="checkbox" class="form-check-input" id="terms" required>
+                <label class="form-check-label" for="terms">I agree to the terms and conditions</label>
+            </div>
+            <button type="submit" class="btn btn-primary mt-3">Send</button>
+        </form>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script>
+        function showContact() {
+            document.getElementById('main-content').style.display = 'none';
+            document.getElementById('contact-form').style.display = 'block';
+        }
+
+        function showHome() {
+            document.getElementById('main-content').style.display = 'block';
+            document.getElementById('contact-form').style.display = 'none';
+        }
+    </script>
+</body>
+</html>
